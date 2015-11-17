@@ -1,0 +1,25 @@
+def readFile(fil):
+	data=[]
+	f=open(fil,'r')
+	data=f.readlines()
+	f.close()
+	return data
+daGab=''
+gabar=readFile('gabarito.txt')
+dados=readFile('cartoes.txt')
+for i in gabar:
+	daGab+=i
+daGab=daGab.strip()
+notAlunos=[]
+for i in dados:
+	notAlunos.append(i.strip())
+
+for i in notAlunos:
+	dad=i.split('#')
+	marc=dad[1]
+	alun=i[0:5]
+	nota=0
+	for j in range(len(marc)):
+		if marc[j] == daGab[j]:
+			nota+=1
+	print 'Aluno: %s\tNota: %d'%(alun,nota)
