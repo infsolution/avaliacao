@@ -1,0 +1,11 @@
+notas=[int(i) for i in raw_input('informe as notas separadas por virguala:\n').split(',')]
+res=[]
+for i in range(len(notas)):
+	aux=notas.count(notas[i])
+	if aux > 1:
+		if res.__contains__(notas[i]):
+			pass
+		else:
+			res.append(notas[i])
+res.sort(reverse=True)
+print res[0]
