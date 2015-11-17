@@ -1,0 +1,9 @@
+lis=[7,4,1,6,9,3,2,0]
+for j in range(len(lis)):#na atividade escrita esqueci deste for!
+	for i in range(len(lis)-1):
+		aux=0
+		if lis[i]>lis[i+1]:
+			aux=lis[i]
+			lis[i]=lis[i+1]
+			lis[i+1]=aux
+print lis
